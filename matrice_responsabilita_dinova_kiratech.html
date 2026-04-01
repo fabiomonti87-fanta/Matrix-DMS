@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Matrice Responsabilità Dinova–Kiratech</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;background:#f9f9f7;color:#1a1a18;padding:2rem 1.5rem;font-size:14px}
+h1{font-size:15px;font-weight:500;color:#1a1a18;margin-bottom:.25rem}
+.sub{font-size:11px;color:#888780;margin-bottom:1.25rem}
+.ctxbar{display:flex;align-items:center;gap:7px;flex-wrap:wrap;margin-bottom:.55rem;min-height:22px}
+.ctx-t{font-size:11px;color:#5f5e5a}
+.cpill{padding:3px 10px;border-radius:20px;font-size:11px;font-weight:500;border:.5px solid transparent}
+.xbtn{padding:3px 9px;border:.5px solid #b4b2a9;border-radius:20px;font-size:11px;cursor:pointer;color:#5f5e5a;background:transparent}
+.xbtn:hover{background:#f1efe8}
+.tw{overflow-x:auto}
+table{border-collapse:collapse;width:100%;min-width:560px}
+th{font-size:11px;font-weight:500;color:#5f5e5a;padding:9px 10px;text-align:center;background:#f1efe8;border:.5px solid #d3d1c7}
+th.lh{text-align:left;padding-left:14px;min-width:220px}
+.grprow td{padding:6px 14px;font-size:10px;font-weight:500;color:#5f5e5a;letter-spacing:.06em;text-transform:uppercase;border:.5px solid #d3d1c7;background:#f1efe8}
+.obsrow-hdr td{padding:5px 14px;font-size:10px;font-weight:500;letter-spacing:.06em;text-transform:uppercase;border:.5px solid #B5D4F4;background:#E6F1FB;color:#185FA5}
+.obsrow td{border:.5px solid #B5D4F4;padding:0;vertical-align:middle;background:#f5f9fd}
+.vr td,.tr td{border:.5px solid #d3d1c7;padding:0;vertical-align:middle;background:#fff}
+.vr{cursor:pointer}
+.vr:hover td{background:#f9f9f7}
+.vr.sel td{background:#E1F5EE}
+.nametd{text-align:left}
+.ni{padding:8px 10px 8px 14px;border-left:3px solid transparent;display:block}
+.ti{padding:7px 10px 7px 22px;display:block}
+.oi{padding:8px 10px 8px 14px;display:block}
+.n1{font-size:12px;font-weight:500;color:#1a1a18;display:flex;align-items:center;gap:5px;flex-wrap:wrap}
+.n2{font-size:10px;color:#888780;margin-top:1px;display:block}
+.byo{background:repeating-linear-gradient(45deg,transparent,transparent 3px,rgba(0,0,0,.025) 3px,rgba(0,0,0,.025) 6px)}
+.byobadge{display:inline-block;font-size:9px;padding:1px 5px;border-radius:2px;background:#FAC775;color:#633806;font-weight:500}
+.infnote{display:inline-block;font-size:9px;padding:1px 5px;border-radius:2px;background:#E6F1FB;color:#0C447C;font-weight:500}
+.cell{text-align:center;padding:6px 5px}
+.cv{display:inline-block;font-size:11px;font-weight:500;padding:3px 9px;border-radius:3px;cursor:pointer;transition:filter .1s,transform .08s;user-select:none}
+.cv:hover{filter:brightness(.88)}
+.cv:active{transform:scale(.95)}
+.nc .cv{cursor:default}
+.nc .cv:hover{filter:none}
+.vD{background:#9FE1CB;color:#085041}
+.vK{background:#F5C4B3;color:#712B13}
+.vtbd{background:#FAC775;color:#633806}
+.vDK{background:#B5D4F4;color:#0C447C}
+.vna{background:#f1efe8;color:#888780}
+.vxt{background:transparent;color:#b4b2a9;border:.5px dashed #d3d1c7;font-size:13px;cursor:help!important;position:relative}
+.vxt:hover{filter:none!important}
+.vxt .tt,.exc .tt{display:none;position:absolute;bottom:calc(100% + 5px);left:50%;transform:translateX(-50%);background:#fff;border:.5px solid #b4b2a9;border-radius:6px;padding:7px 10px;font-size:10px;color:#1a1a18;white-space:nowrap;z-index:99;min-width:230px;line-height:1.7;box-shadow:0 2px 8px rgba(0,0,0,.08);font-weight:400}
+.vxt .tt::after,.exc .tt::after{content:'';position:absolute;top:100%;left:50%;transform:translateX(-50%);border:4px solid transparent;border-top-color:#b4b2a9}
+.vxt:hover .tt,.exc:hover .tt{display:block}
+.exc{display:inline-block;font-size:9px;font-weight:500;padding:1px 4px;border-radius:2px;margin-left:3px;background:#fff;color:#5f5e5a;border:.5px solid #b4b2a9;cursor:help;vertical-align:middle;position:relative}
+.leg{display:flex;gap:8px;flex-wrap:wrap;margin-top:.85rem;align-items:center}
+.li{display:flex;align-items:center;gap:4px;font-size:11px;color:#5f5e5a}
+.ls{width:11px;height:11px;border-radius:2px;flex-shrink:0}
+.lxt{width:11px;height:11px;border-radius:2px;border:.5px dashed #d3d1c7;flex-shrink:0}
+.notes{margin-top:.75rem;display:flex;flex-direction:column;gap:5px}
+.nt{padding:.5rem .8rem;background:#f1efe8;border-radius:7px;border:.5px solid #d3d1c7;font-size:11px;color:#5f5e5a;line-height:1.65}
+.nt strong{font-weight:500;color:#1a1a18}
+</style>
+</head>
+<body>
+<h1>Matrice di Responsabilità Dinova–Kiratech · Servizi Cloud &amp; Managed</h1>
+<div class="sub">Clicca una riga vendor per filtrare la sezione tecnologica e modificare i valori.</div>
+<div class="ctxbar" id="ctx"></div>
+<div class="tw">
+<table>
+<thead><tr>
+  <th class="lh"></th>
+  <th>SPOC</th><th>L1</th><th>L2</th>
+  <th>L3 <span style="font-size:9px;font-weight:400">(8×5)</span></th>
+  <th>Consulenza</th>
+</tr></thead>
+<tbody id="tb"></tbody>
+</table>
+</div>
+<div class="leg">
+  <span style="font-size:11px;color:#888780">Chi eroga:</span>
+  <div class="li"><div class="ls vD"></div>Dinova</div>
+  <div class="li"><div class="ls vK"></div>Kiratech</div>
+  <div class="li"><div class="ls vDK"></div>D›K — Dinova triage, Kiratech esegue</div>
+  <div class="li"><div class="ls vtbd"></div>TBD</div>
+  <div class="li"><div class="lxt"></div>— fuori perimetro DMS</div>
+  <div class="li" style="margin-left:6px;border-left:.5px solid #d3d1c7;padding-left:6px">
+    <span class="exc" style="cursor:default">~n</span>
+    <span style="font-size:11px;color:#888780">= eccezioni per vendor — hover per dettaglio</span>
+  </div>
+</div>
+<div class="notes">
+  <div class="nt" style="border-color:#B5D4F4;background:#f5f9fd">
+    <strong style="color:#185FA5">◈ Observability</strong> — Dinova su GCP, Azure, DC e On-premise (strumenti nativi del provider + Grafana, connettori in sviluppo). La piattaforma del cliente non diventa la nostra. Su <strong>AWS</strong> e scenari <strong>multicloud / Grafana cross-provider</strong> → Kiratech.
+  </div>
+  <div class="nt"><strong>* Infrastruttura</strong> — solo apertura e gestione ticket verso il vendor (Google Support, Microsoft Support, AWS Support). Richiede contratto di supporto attivo con il vendor.</div>
+  <div class="nt"><strong>— Fuori perimetro DMS</strong> — in carico al cliente o a fornitore terzo specializzato (DBA, sviluppatore applicativo, system integrator).</div>
+  <div class="nt"><strong>SPOC</strong> — sempre Dinova: ingresso unico, triage e dispatching. &nbsp;|&nbsp; <strong>L3</strong> — 8×5, non H24 / reperibilità. &nbsp;|&nbsp; <strong>Consulenza</strong> — fuori canone MSP, a giornate. &nbsp;|&nbsp; <strong>On-premise</strong> — <em>by opportunity</em>, valutato caso per caso.</div>
+</div>
+<script>
+const LEV=['SPOC','L1','L2','L3','Consulenza'];
+const VALS=['D','D›K','K','TBD','~','-'];
+const NA_TIP='Fuori perimetro DMS — in carico al cliente<br>o a fornitore terzo specializzato.';
+const VCLS={D:'vD','D›K':'vDK',K:'vK',TBD:'vtbd','~':'vxt','-':'vna'};
+const VENDORS=[
+  {n:'GCP',s:'Google Cloud Platform',c:'#1D9E75'},
+  {n:'Azure',s:'Microsoft Azure',c:'#378ADD'},
+  {n:'AWS',s:'Amazon Web Services',c:'#EF9F27'},
+  {n:'On-premise',s:'infrastruttura cliente',c:'#888780',byo:true},
+  {n:'DC / Data Center',s:'cloud privato Dinova',c:'#7F77DD'},
+];
+const obsData=[
+  ['D','D','D','D','D'],
+  ['D','D','D','D','D'],
+  ['D','K','K','K','K'],
+  ['D','D','D','D','D'],
+  ['D','D','D','D','D'],
+];
+const obsNote={2:'AWS: da L1 in poi → Kiratech (multicloud / cross-provider)'};
+const TECHS=[
+  {n:'Infrastruttura',s:'apertura e gestione ticket verso il vendor',inf:true},
+  {n:'VM & Sistemistico',s:'gestione risorse compute e sistemi operativi'},
+  {n:'PaaS — Cloud Native',s:'es.: Cloud Run, GKE, AKS, App Service, EKS'},
+  {n:'Database',s:'monitoring a valle della platform — no DBA'},
+  {n:'Applicativi cliente',s:'endpoint health check, routine monitoring — no sviluppo'},
+  {n:'Applicativi 3rd party',s:'es.: Elastic, Kafka, Redis, Keycloak'},
+];
+const data=[
+  [['D','D','D','D','D'],['D','D','D','D','D'],['D','D','D','D','D'],['D','~','~','~','~'],['D','D','~','~','~'],['D','K','K','K','K']],
+  [['D','D','D','D','D'],['D','D','D','D','D'],['D','D','D','D','D'],['D','~','~','~','~'],['D','D','~','~','~'],['D','K','K','K','K']],
+  [['D','K','K','K','K'],['D','K','K','K','K'],['D','K','K','K','K'],['D','K','K','K','K'],['D','K','K','K','K'],['D','K','K','K','K']],
+  [['~','~','~','~','~'],['D','D','D','D','D'],['D','K','K','K','K'],['D','~','~','~','~'],['D','D','~','~','~'],['D','K','K','K','K']],
+  [['D','D','D','D','D'],['D','D','D','D','D'],['D','D','D','D','D'],['D','D','D','D','D'],['D','D','~','~','~'],['D','D','TBD','TBD','D']],
+];
+let sel=-1;
+function majority(vals){const cnt={};vals.forEach(v=>{cnt[v]=(cnt[v]||0)+1;});return Object.entries(cnt).sort((a,b)=>b[1]-a[1])[0][0];}
+function naCell(b){return `<td class="cell nc" style="border:.5px solid ${b||'#d3d1c7'}"><span class="cv vxt" style="cursor:help">—<span class="tt">${NA_TIP}</span></span></td>`;}
+function solidCell(val,editable,vi,ti,li,b){
+  if(val==='~') return naCell(b);
+  const cls=VCLS[val]||'vna';
+  const nc=editable?'':' nc';
+  const oc=editable?` onclick="cycle(${vi},${ti},${li})"`:' ';
+  return `<td class="cell${nc}" style="border:.5px solid ${b||'#d3d1c7'}"><span class="cv ${cls}"${oc}>${val}</span></td>`;
+}
+function obsCellAgg(li){
+  const pairs=VENDORS.map((v,vi)=>({name:v.n,val:obsData[vi][li]}));
+  const maj=majority(pairs.map(p=>p.val));
+  const exc=pairs.filter(p=>p.val!==maj);
+  let inner=`<span class="cv nc ${VCLS[maj]||'vna'}">${maj}</span>`;
+  if(exc.length>0){const lines=exc.map(p=>`${p.name}: <strong>${p.val}</strong>`).join('<br>');inner+=`<span class="exc">~${exc.length}<span class="tt">${lines}</span></span>`;}
+  return `<td class="cell nc" style="border:.5px solid #B5D4F4;background:#f5f9fd">${inner}</td>`;
+}
+function aggCellTech(ti,li){
+  const pairs=VENDORS.map((v,vi)=>({name:v.n,val:data[vi][ti][li]}));
+  const maj=majority(pairs.map(p=>p.val));
+  const exc=pairs.filter(p=>p.val!==maj);
+  let inner=maj==='~'?`<span class="cv vxt nc" style="cursor:help">—<span class="tt">${NA_TIP}</span></span>`:`<span class="cv nc ${VCLS[maj]||'vna'}">${maj}</span>`;
+  if(exc.length>0){const lines=exc.map(p=>`${p.name}: <strong>${p.val==='~'?'—':p.val}</strong>`).join('<br>');inner+=`<span class="exc">~${exc.length}<span class="tt">${lines}</span></span>`;}
+  return `<td class="cell nc" style="border:.5px solid #d3d1c7">${inner}</td>`;
+}
+function render(){
+  const tb=document.getElementById('tb');let h='';
+  h+=`<tr class="grprow"><td colspan="6"><span style="display:inline-block;width:7px;height:7px;border-radius:1px;background:#1D9E75;margin-right:7px;vertical-align:middle"></span>Cloud Providers<span style="font-size:9px;font-weight:400;font-style:italic;margin-left:8px;text-transform:none;letter-spacing:0">clicca una riga per filtrare</span></td></tr>`;
+  VENDORS.forEach((v,vi)=>{
+    const isByo=!!v.byo;
+    h+=`<tr class="vr${sel===vi?' sel':''}" onclick="selV(${vi})">`;
+    h+=`<td class="nametd${isByo?' byo':''}" style="border:.5px solid #d3d1c7"><span class="ni" style="border-left-color:${v.c}"><span class="n1">${v.n}${isByo?`<span class="byobadge">by opp.</span>`:''}</span><span class="n2">${v.s}</span></span></td>`;
+    LEV.forEach((_,li)=>{
+      const pairs=TECHS.map((_,ti)=>({name:TECHS[ti].n,val:data[vi][ti][li]}));
+      const maj=majority(pairs.map(p=>p.val));const exc=pairs.filter(p=>p.val!==maj);
+      let inner=maj==='~'?`<span class="cv vxt nc" style="cursor:help">—<span class="tt">${NA_TIP}</span></span>`:`<span class="cv nc ${VCLS[maj]||'vna'}">${maj}</span>`;
+      if(exc.length>0){const lines=exc.map(p=>`${p.name}: <strong>${p.val==='~'?'—':p.val}</strong>`).join('<br>');inner+=`<span class="exc">~${exc.length}<span class="tt">${lines}</span></span>`;}
+      h+=`<td class="cell nc${isByo?' byo':''}" style="border:.5px solid #d3d1c7">${inner}</td>`;
+    });
+    h+=`</tr>`;
+  });
+  h+=`<tr class="obsrow-hdr"><td colspan="6"><span style="display:inline-block;width:7px;height:7px;border-radius:1px;background:#378ADD;margin-right:7px;vertical-align:middle"></span>Observability<span style="font-size:9px;font-weight:400;font-style:italic;margin-left:8px;text-transform:none;letter-spacing:0">perimetro trasversale — strumenti nativi + Grafana</span></td></tr>`;
+  h+=`<tr class="obsrow"><td class="nametd" style="border:.5px solid #B5D4F4;background:#f5f9fd"><span class="oi" style="border-left:3px solid #378ADD"><span class="n1" style="color:#185FA5">Piattaforma di monitoraggio</span><span class="n2">Dinova su tutti i vendor tranne AWS e multicloud — vedi nota</span></span></td>`;
+  LEV.forEach((_,li)=>{
+    if(sel>=0){
+      const val=obsData[sel][li];const cls=VCLS[val]||'vna';
+      const tip=obsNote[sel]?`<span class="tt">${obsNote[sel]}</span>`:'';
+      h+=`<td class="cell nc" style="border:.5px solid #B5D4F4;background:#f5f9fd"><span class="cv ${cls} nc"${tip?` style="position:relative;cursor:help"`:''} >${val}${tip}</span></td>`;
+    } else {h+=obsCellAgg(li);}
+  });
+  h+=`</tr>`;
+  const subtitle=sel>=0?`vista <span style="font-weight:500;color:${VENDORS[sel].c}">${VENDORS[sel].n}</span>${VENDORS[sel].byo?` <span class="byobadge">by opp.</span>`:''} — clicca cella per modificare`:`aggregato — seleziona un vendor sopra per modificare`;
+  h+=`<tr class="grprow"><td colspan="6"><span style="display:inline-block;width:7px;height:7px;border-radius:1px;background:#7F77DD;margin-right:7px;vertical-align:middle"></span>Technology &amp; Services &nbsp;<span style="font-size:9px;font-weight:400;text-transform:none;letter-spacing:0">${subtitle}</span></td></tr>`;
+  TECHS.forEach((tech,ti)=>{
+    h+=`<tr class="tr"><td class="nametd" style="border:.5px solid #d3d1c7"><span class="ti"><span class="n1">${tech.n}${tech.inf?`<span class="infnote">* vendor ticket</span>`:''}</span><span class="n2">${tech.s}</span></span></td>`;
+    LEV.forEach((_,li)=>{h+=sel>=0?solidCell(data[sel][ti][li],true,sel,ti,li):aggCellTech(ti,li);});
+    h+=`</tr>`;
+  });
+  tb.innerHTML=h;
+  const ctx=document.getElementById('ctx');
+  ctx.innerHTML=sel>=0?`<span class="ctx-t">Filtro attivo:</span><span class="cpill" style="background:${VENDORS[sel].c}22;color:${VENDORS[sel].c};border-color:${VENDORS[sel].c}55">${VENDORS[sel].n}</span>${VENDORS[sel].byo?`<span class="byobadge">by opportunity</span>`:''}<button class="xbtn" onclick="selV(-2)">× rimuovi filtro</button>`:`<span class="ctx-t">Clicca una riga vendor per filtrare la sezione tecnologica e modificare i valori.</span>`;
+}
+function selV(vi){sel=(vi===-2||sel===vi)?-1:vi;render();}
+function cycle(vi,ti,li){data[vi][ti][li]=VALS[(VALS.indexOf(data[vi][ti][li])+1)%VALS.length];render();}
+render();
+</script>
+</body>
+</html>
